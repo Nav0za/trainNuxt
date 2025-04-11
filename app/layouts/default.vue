@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <Header />
-        <slot />
-        <h1>Footer</h1>
-    </div>
+  <div>
+    <LazyAppHeader />
+    <slot />
+    <h1>Footer</h1>
+  </div>
 </template>
 
 <script setup>

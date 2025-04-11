@@ -39,8 +39,6 @@ const items = computed(() => [
 
     <template #right>
       <UColorModeButton />
-
-      
     </template>
   </UHeader>
 </template>
