@@ -14,6 +14,8 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <UMain>
+      <NuxtPage />
+    </UMain>
   </NuxtLayout>
 </template>

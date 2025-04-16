@@ -1,8 +1,6 @@
 <template>
   <div>
-    <LazyAppHeader />
-    <slot />
-    <LazyAppFooter />
+    <p>Register</p>
   </div>
 </template>
 
