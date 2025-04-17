@@ -13,7 +13,7 @@
           },
           {
             label: 'สมัครสมาชิกฟรี',
-            to: '/register',
+            to: '/auth/register',
             variant: 'outline',
             color: 'warning',
             icon: 'i-heroicons-user-plus'
