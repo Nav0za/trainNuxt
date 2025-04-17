@@ -1,30 +1,43 @@
 <script setup lang="ts">
-const route = useRoute()
+import type { NavigationMenuItem } from '@nuxt/ui'
 
-const items = computed(() => [
+const route = useRoute()
+const items = computed<NavigationMenuItem[]>(() => [
   {
-    label: 'Docs',
-    to: '/getting-started',
-    active: route.path.startsWith('/getting-started')
+    label: 'หน้าแรก',
+    to: '/',
+    active: route.path === '/'
   },
   {
-    label: 'Components',
-    to: '/components',
-    active: route.path.startsWith('/components')
+    label: 'คอร์สทั้งหมด',
+    to: '/courses',
+    active: route.path.startsWith('/courses')
   },
   {
-    label: 'Roadmap',
-    to: '/roadmap'
+    label: 'ผู้สอน',
+    to: '/teacher',
+    active: route.path.startsWith('/teacher')
   },
   {
-    label: 'Figma',
-    to: 'https://www.figma.com/community/file/1288455405058138934',
-    target: '_blank'
+    label: 'ติดต่อเรา',
+    to: '/contact',
+    active: route.path.startsWith('/contact')
   },
   {
-    label: 'Releases',
-    to: 'https://github.com/nuxt/ui/releases',
-    target: '_blank'
+    label: 'บทความ',
+    to: '/blog',
+    active: route.path.startsWith('/blog')
+  },
+  {
+    label: 'ค้นหา',
+    icon: 'i-lucide-search',
+    component: 'UInput',
+    props: {
+      placeholder: 'ค้นหาคอร์สเรียน...',
+      color: 'gray',
+      trailing: true,
+      icon: 'i-lucide-search'
+    }
   }
 ])
 </script>
@@ -32,13 +45,23 @@ const items = computed(() => [
 <template>
   <UHeader>
     <template #title>
-      <Logo class="h-6 w-auto" />
+      <LazyAppLogo class="h-6 w-auto" />
     </template>
-
     <UNavigationMenu :items="items" />
-
     <template #right>
       <UColorModeButton />
+      <UButton
+        to="/auth/login"
+        icon="i-lucide-user"
+      >
+        เข้าสู่ระบบ
+      </UButton>
+      <UButton
+        to="/auth/register"
+        icon="i-lucide-user-plus"
+      >
+        สมัครสมาชิก
+      </UButton>
     </template>
   </UHeader>
 </template>

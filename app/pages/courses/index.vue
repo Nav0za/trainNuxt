@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>เข้าสู่ระบบ</h1>
+    <h1>คอร์สทั้งหมด</h1>
   </div>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

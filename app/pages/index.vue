@@ -138,7 +138,7 @@
     <!-- teacher recommendations -->
     <section>
       <h2 class="text-3xl font-bold text-center mt-30 mb-10">
-        คอร์สของครูที่แนะนำ
+        คอร์สของผู้สอนที่แนะนำ
       </h2>
       <div class="flex justify-center flex-wrap gap-4">
         <UPageCard
@@ -154,16 +154,16 @@
           </template>
           <div class="flex justify-center gap-2">
             <UButton
-              to="/courses/teachers"
+              to="/teacher/course"
               class="w-full text-center"
               color="warning"
               variant="subtle"
               icon="i-heroicons-academic-cap"
             >
-              ดูคอร์สของครู
+              ดูคอร์สของผู้สอน
             </UButton>
             <UButton
-              to="/courses/teachers"
+              to="/teacher/profile"
               class="w-full text-center"
               color="info"
               variant="subtle"
